@@ -1,0 +1,78 @@
+body {
+    background-color: hsl(0, 0%, 50%);
+    color: hsl(0, 0%, 20%);
+    font-family: sans-serif;
+}
+
+header {
+    text-align: center;
+}
+
+header, article {
+    background-color: hsl(0, 0%, 90%);
+    border-radius: 3px;
+    margin: 30px auto;
+    max-width: 800px;
+    overflow: hidden;
+    padding: 20px 50px 30px 50px;
+}
+
+nav {
+    margin-top: 30px;
+    text-align: center;
+}
+
+nav > a {
+    margin: auto 20px;
+}
+
+a {
+    color: hsl(150, 100%, 30%);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.item {
+    margin: auto 10px 10px auto;
+    padding: 10px 0.5em 10px 1em;
+}
+
+.item:hover
+{
+    background-color: hsl(0, 0%, 85%);
+}
+
+.tile {
+    background-size: cover;
+    border-radius: 3px;
+    display: block;
+    float: left;
+    max-width: 350px;
+    min-height: 70px;
+    width: 90%;
+}
+
+ol {
+    padding-left: 0;
+}
+
+li {
+    border-radius: 3px;
+    counter-increment: cnt;
+    list-style-position: outside;
+	list-style-type: none;
+    padding: 10px 0.5em 10px 3.5em;
+}
+
+li::before {
+    content: "[" counter(cnt) "] ";
+	display: inline-block;
+	margin-left: -2.5em;
+    width: 2.5em;
+}
+
+li:hover
+{
+    background-color: hsl(0, 0%, 85%);
+}
+
