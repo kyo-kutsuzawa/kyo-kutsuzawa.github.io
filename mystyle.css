@@ -42,3 +42,19 @@ a {
     min-height: 70px;
     width: 90%;
 }
+
+@media screen and (max-width:600px) {
+    header, article {
+        padding: 0px 20px 30px 20px;
+    }
+
+    .item {
+        border-radius: 3px;
+        margin: auto -5px 10px -5px;
+        padding: 10px 5px 10px 5px;
+    }
+
+    .tile {
+        width: 100%;
+    }
+}
