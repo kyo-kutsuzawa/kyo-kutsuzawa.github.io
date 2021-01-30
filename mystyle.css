@@ -30,7 +30,14 @@ a {
     padding: 10px 0.5em 10px 1em;
 }
 
-.item:hover
+.item:hover, .item:active
 {
     background-color: hsl(0, 0%, 85%);
+}
+
+.tile {
+    float: left;
+    max-width: 350px;
+    min-height: 70px;
+    width: 90%;
 }
