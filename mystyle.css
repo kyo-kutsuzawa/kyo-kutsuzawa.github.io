@@ -54,6 +54,51 @@ a {
     width: 90%;
 }
 
+.research_item {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 3px;
+    display: inline-block;
+    height: 250px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 250px;
+}
+
+.research_item:hover {
+    animation-duration: 0.1s;
+    animation-name: anime1;
+    background-size: 110%;
+    outline: solid 5px #0984e3;
+}
+
+@keyframes anime1 {
+    0% {background-size: 100%;}
+    100% {background-size: 110%;}
+}
+
+.research_item > a {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.6) 85%, rgba(0, 0, 0, 0.7));
+    border-radius: 3px;
+    color: hsl(0, 0%, 85%);
+    display: inline-block;
+    font-weight: normal;
+    height: 240px;
+    padding-top: 10px;
+    position: relative;
+    width: 100%;
+}
+
+.research_item > a > span {
+    bottom: 10px;
+    font-weight: bold;
+    left: 20px;
+    position: absolute;
+    right: 20px;
+    text-align: left;
+}
+
 ol {
     padding-left: 0;
 }
@@ -71,6 +116,10 @@ ol > li::before {
 	display: inline-block;
 	margin-left: -2.5em;
     width: 2.5em;
+}
+
+p {
+    text-align: justify;
 }
 
 @media screen and (max-width:600px) {
