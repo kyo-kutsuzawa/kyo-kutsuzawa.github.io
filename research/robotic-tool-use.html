@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Robot control for tool use</title>
+<link href="../mystyle.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <h1>Robot control for tool use</h1>
+    </header>
+    <main>
+        <article>
+            <h1>概要</h1>
+
+            <p>道具使用はヒトを特徴づける能力のひとつであり、人類の文明の発展は道具の発展によって支えられてきたと言っても過言ではありません。道具を使うことで、ヒトは重いものを持ち上げたり精密な動作をおこなったりと、身ひとつではできないようなさまざまな作業を遂行しています。すなわち、ヒトは道具によって自らの能力を拡張していると言えます。</p>
+
+            <p>ロボットも同様に、道具を使いこなすことで元来の能力を拡張し、高い汎用性を獲得できると期待されます。本テーマでは、道具使用のための制御系設計などに取り組んでいます。</p>
+        </article>
+
+        <article>
+            <h1>具体事例: コンパスで円を描く制御</h1>
+
+            <p>ヒトは円や弧を正確に描きたいときにはコンパスを使います。フリーハンドで円を描くと崩れた形になってしまいますが、コンパスを使えば正確な円を容易に描くことができます。言い換えると、コンパスを使うことでヒトは自らの制御性能を大きく改善していると言えるでしょう。</p>
+
+            <p>我々は、この能力を再現するような制御系を設計しました。具体的には、コンパス使用に適した制御座標系を設計することで、円を描く機能を制御座標軸のひとつとして表現しました。その座標系で位置制御と力制御とを組み合せることで、円軌道を描く動作が自然に現れるのです。結果として、比較的単純な制御器を使って、鉛筆だけで円を描かせた場合よりも正確な円を描くことができました。</p>
+                
+            <p>ロボットはいつも正確な制御ができるように思えますが、それは正確な測定と環境の厳密なモデル化、および精密な制御があってのものです。紙の位置に誤差や不確実性があったり、あるいはペンや把持機構にたわみが生じたりすると、制御に誤差が生じてしまいます。しかし、コンパスを使えば、針先が紙面に刺さっている限り筆先は円軌道に沿ってしか動かせないので、制御にもセンサにも頼らず円軌道が実現されます。このような機構的拘束を活かすような制御によって、制御の誤差に対して頑健に作業を遂行することができます。</p>
+
+            <p>出典：Kyo Kutsuzawa, Sho Sakaino, and Toshiaki Tsuji, &ldquo;A Control System for a Tool Use Robot: Drawing a Circle by Educing Functions of a Compass,&rdquo; Journal of Robotics and Mechatronics, vol. 29, no. 2, pp. 395–405, 2017. Open Access: <a href="https://doi.org/10.20965/jrm.2017.p0395">https://doi.org/10.20965/jrm.2017.p0395</a></p>
+        </article>
+
+        <article>
+            <h1>成果発表など</h1>
+
+            <section>
+                <h1>学術論文（査読あり）</h1>
+                <ol>
+                    <li>Kyo Kutsuzawa, Sho Sakaino, and Toshiaki Tsuji, &ldquo;A Control System for a Tool Use Robot: Drawing a Circle by Educing Functions of a Compass,&rdquo; Journal of Robotics and Mechatronics, vol. 29, no. 2, pp. 395–405, 2017.<br>Open Access: <a href="https://doi.org/10.20965/jrm.2017.p0395">https://doi.org/10.20965/jrm.2017.p0395</a> and <a href="https://www.jstage.jst.go.jp/article/jrobomech/29/2/29_395/_article/-char/en">https://www.jstage.jst.go.jp/article/jrobomech/29/2/29_395/_article/-char/en</a></li>
+                </ol>
+            </section>
+
+            <section>
+                <h1>国内学会（査読なし）</h1>
+                <ol>
+                    <li>沓澤京, 大熊隼, 境野翔, 辻俊明: &ldquo;コンパスで円を描く動作を実現する制御,&rdquo; ロボティクス・メカトロニクス講演会2015, 2015, 2P1-F07.</li>
+                </ol>
+            </section>
+
+        </article>
+    </main>
+</body>
+</html>
