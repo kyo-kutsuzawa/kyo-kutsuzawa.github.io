@@ -1,24 +1,37 @@
+:root {
+    --background-color: #f4f4f4;
+    --foreground-color: #2d3436;
+    --accent-color: #0487e2;
+    --hover-color: #b0d6f5;
+}
+
 body {
-    background-color: #636e72;
-    color: #2d3436;
+    background-color: var(--background-color);
+    color: var(--foreground-color);
     font-family: sans-serif;
     font-size: 100%;
 }
 
 header, article {
-    background-color: #dfe6e9;
     border-radius: 3px;
-    margin: 30px auto;
-    max-width: 800px;
+    margin: auto;
+    max-width: 900px;
     overflow: hidden;
-    padding: 20px 50px 30px 50px;
+    padding: 0 50px;
 }
 
 header {
     text-align: center;
-    max-width: 900px;
-    padding-left: 0;
-    padding-right: 0;
+}
+
+article > h1 {
+    background-color: var(--foreground-color);
+    border-color: var(--foreground-color);
+    border-style: solid;
+    border-width: 5px;
+    color: var(--background-color);
+    margin-top: 50px;
+    padding-left: 10px;
 }
 
 nav {
@@ -31,25 +44,25 @@ nav > a {
 }
 
 a {
-    color: #0984e3;
+    color: var(--accent-color);
     font-weight: bold;
     text-decoration: none;
 }
 
 .item {
     border-radius: 3px;
-    margin: auto 10px 10px auto;
-    padding: 10px 0.5em 10px 1em;
+    margin: 10px;
+    padding: 0.5em;
 }
 
 .item:hover, li:hover
 {
-    background-color: #b2bec3;
+    background-color: var(--hover-color);
 }
 
 .tile {
     float: left;
-    max-width: 350px;
+    max-width: 250px;
     min-height: 70px;
     width: 90%;
 }
@@ -60,17 +73,17 @@ a {
     background-size: 100%;
     border-radius: 3px;
     display: inline-block;
-    height: 250px;
+    height: 200px;
     margin-right: 10px;
     margin-bottom: 10px;
-    width: 250px;
+    width: 200px;
 }
 
 .research_item:hover {
     animation-duration: 0.1s;
     animation-name: anime1;
     background-size: 110%;
-    outline: solid 5px #0984e3;
+    outline: solid 3px var(--hover-color);
 }
 
 @keyframes anime1 {
@@ -81,10 +94,10 @@ a {
 .research_item > a {
     background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.6) 85%, rgba(0, 0, 0, 0.7));
     border-radius: 3px;
-    color: hsl(0, 0%, 85%);
+    color: var(--background-color);
     display: inline-block;
     font-weight: normal;
-    height: 240px;
+    height: 190px;
     padding-top: 10px;
     position: relative;
     width: 100%;
@@ -124,31 +137,19 @@ p {
 
 @media screen and (max-width:600px) {
     header, article {
-        padding: 0px 20px 30px 20px;
+        padding: 0px 20px;
     }
 
     .item {
-        border-radius: 3px;
-        margin: auto -5px 10px -5px;
-        padding: 10px 5px 10px 5px;
-    }
-
-    .tile {
-        width: 100%;
+        max-width: 100%;
     }
 
     ol > li {
-        border-radius: 3px;
-        counter-increment: cnt;
-        list-style-position: outside;
-        list-style-type: none;
         padding: 10px 5px 10px 2em;
         word-wrap: break-word;
     }
 
     ol > li::before {
-        content: "[" counter(cnt) "] ";
-        display: inline-block;
         margin-left: -2em;
         width: 2em;
     }
