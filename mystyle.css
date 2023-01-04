@@ -12,7 +12,7 @@ body {
     font-size: 100%;
 }
 
-header, article {
+header, main > section {
     border-radius: 3px;
     margin: auto;
     max-width: 900px;
@@ -24,7 +24,7 @@ header {
     text-align: center;
 }
 
-article > h1 {
+main > section > h1 {
     background-color: var(--foreground-color);
     border-color: var(--foreground-color);
     border-style: solid;
@@ -47,6 +47,10 @@ a {
     color: var(--accent-color);
     font-weight: bold;
     text-decoration: none;
+}
+
+address {
+    font-style: normal;
 }
 
 .item {
@@ -84,6 +88,22 @@ a {
     animation-name: anime1;
     background-size: 110%;
     outline: solid 3px var(--hover-color);
+}
+
+#imitation-learning-synergies {
+    background-image: url(research/imitation-learning-synergies.jpg);
+}
+
+#movement-generation-seq2seq {
+    background-image: url(research/movement-generation-seq2seq.jpg);
+}
+
+#force-signal-processing{
+    background-image: url(research/force-signal-processing.jpg);
+}
+
+#robotic-tool-use {
+    background-image: url(research/robotic-tool-use.jpg);
 }
 
 @keyframes anime1 {
@@ -133,6 +153,10 @@ ol > li::before {
 
 p {
     text-align: justify;
+}
+
+#resource > p {
+    text-align: unset;
 }
 
 @media screen and (max-width:600px) {
