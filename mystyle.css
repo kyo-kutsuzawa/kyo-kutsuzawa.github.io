@@ -70,17 +70,17 @@ address {
     padding: 0.5em;
 }
 
-.item:hover, li:hover
-{
-    background-color: var(--hover-color);
-}
-
 .tile {
     float: left;
     max-width: 250px;
     min-height: 70px;
     width: 90%;
     background-color: var(--tile-color);
+}
+
+.tile:hover
+{
+    background-color: var(--hover-color);
 }
 
 .research_item {
